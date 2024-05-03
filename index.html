@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Driver Game</h1>
+    <div id="startMenu">
+      <p>Welcome to the Driver Game!</p>
+      <button onclick="startGame()">Start</button>
+    </div>
+    <div id="dialogue" style="display: none;">
+      <p>Opponent <span id="opponent"></span>: <span id="oppText"></span></p> <!--Hey, want to race?-->
+      <button onclick="chooseAction(true)">Race</button>
+      <button onclick="chooseAction(false)">Don't race</button>
+    </div>
+    <div id="race" style="display: none;">
+      <div id="speedometer">
+        <div id="speedometer-bar"></div>
+        <div id="redline"></div>
+      </div>
+      <p>Shift gears by clicking the button!</p>
+      <button id="shiftButton" onclick="shiftGearButton()"></button>
+    </div>
+    <div id="result" style="display: none;">
+      <p id="resultText"></p>
+      <p id="didntRaceText"></p>
+      <!-- <button id ="restartButton" onclick="restartGame()">Restart</button> -->
+      <button id ="returntoHomeButton" onclick="returntoHome()">Return To Start Menu</button>
+    </div>
+    
+
+
+    <!-- didnt race
+    <div id ="surrender" style=" display: none;">
+      
+      <button id ="returntoHomeButton" onclick="returntoHome()">Return To Start Menu</button>
+    </div> -->
+  </div>
+</body>
+</html>
